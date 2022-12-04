@@ -1,0 +1,23 @@
+{
+  "name": "pdf_generate_with_puppeteer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs-extra": "^10.1.0",
+    "handlebars": "^4.7.7",
+    "nodemon": "^2.0.20",
+    "puppeteer": "^19.2.2",
+    "short-unique-id": "^4.4.4"
+  }
+}

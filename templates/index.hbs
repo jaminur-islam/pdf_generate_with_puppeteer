@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>{{title}}</title>
+</head>
+<body >
+    <h5 class="text-center"> Timely Employee schedules</h5>
+   <table class="table w-full text-center">
+    <thead>
+      <tr>
+        <th class="text-left">Employee</th>
+        <th class="text-left">Designation</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each .}}
+       <tr> 
+        <td class="text-left">{{name}}</td>
+        <td class="text-left">{{designation}}</td>
+         {{#each schedules}}
+        {{!-- <td>{{alert_time}}</td> --}}
+        {{#each days}}
+        {{#if available}}
+         <td>{{time.start}}-{{time.end}}</td>
+         {{else}}
+         <td>.</td>
+        {{/if}}
+       
+        {{/each}}
+        {{/each}}
+        <td>...</td>
+       </tr>
+    {{/each}}
+    <tbody/>
+      <table/>
+</body>
+</html>
